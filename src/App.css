@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  background-color: rgb(198, 207, 235);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Container {
+  background-color: #282c34;
+}
