@@ -14,7 +14,7 @@ function App() {
 
       </NavbarComp>
       TÄHÄN JOTAIN PELEJÄ
-      <Body url={URL}></Body>
+      <Body url={URL}/>
       <Footer/>
         
      

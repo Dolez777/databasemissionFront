@@ -1,8 +1,8 @@
-html,body {
-  height: 100%;
-}
+
 .App {
   text-align: center;
+  height: 100%
+  
 }
 
 .App-logo {
@@ -47,4 +47,10 @@ html,body {
 
 .Container {
   background-color: #282c34;
+}
+#gamesdiv{
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  display: flex;
 }
