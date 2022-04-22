@@ -15,11 +15,11 @@ export default function Body({ url }) {
     }).catch(error => {
 			alert(error.response === undefined ? error : error.response.data.error);
 		})
-  }, [])
+  }, [url])
 
   return (
     
-    <div>
+    <div>lol
       {game.map(games => (
         <h5 key={games.id}>
           {games.name}
