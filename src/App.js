@@ -5,6 +5,8 @@ import NavbarComp from './Navbar';
 import Footer from './Footer'
 import Body from './body';
 
+const URL = 'http://localhost/databasemissionBack/';
+
 function App() {
   return (
     <div className='App'>
@@ -12,7 +14,7 @@ function App() {
 
       </NavbarComp>
       TÄHÄN JOTAIN PELEJÄ
-      <Body></Body>
+      <Body url={URL}></Body>
       <Footer/>
         
      
