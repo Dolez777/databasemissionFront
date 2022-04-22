@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './Navbar';
 import Footer from './Footer'
-
+import Body from './body';
 
 function App() {
   return (
@@ -12,9 +12,10 @@ function App() {
 
       </NavbarComp>
       TÄHÄN JOTAIN PELEJÄ
-      <Footer>
+      <Body></Body>
+      <Footer/>
         
-      </Footer>
+     
     </div>
   );
 }
