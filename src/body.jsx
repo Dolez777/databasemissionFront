@@ -4,26 +4,26 @@ import "./body.css";
 
 export default function Body({ url }) {
 
-  const [game, setGame] = useState([]);
+  const [games, setGames] = useState([]);
 
   useEffect(() => {
 		axios.get(url + 'games/getallproducts.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
-			setGame(json.game);
+			setGames(json);
     }).catch(error => {
 			alert(error.response === undefined ? error : error.response.data.error);
 		})
   }, [url])
 
-  return (
-    
+  
+  return ( 
     <div id='gamesdiv'>
-      {game?.map(games => (
-        <div key={games.id}>{games.name}</div>
-        ))}  
+      {games?.map((game) => {
+       return <div key={game.id}> {game.name}</div>
+      })}  
     </div>
      
-  )
+  ); 
 }
