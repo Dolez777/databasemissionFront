@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './Navbar';
 import Footer from './Footer'
 import Body from './body';
-import { Routes, Route } from 'react-router-dom';
+import Gameadd from './gameadd';
 
 const URL = 'http://localhost/databasemissionBack/';
 
@@ -15,10 +15,8 @@ function App() {
 
       </NavbarComp>
       TÄHÄN JOTAIN PELEJÄ
-      <Routes>
-        <Route path="/games" element={<Body url={URL}/>} /> 
-      
-      </Routes>
+      <Body url={URL}/>
+      <Gameadd url={URL} />
       <Footer/>
         
      
