@@ -1,6 +1,10 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import "./body.css";
+import Body from './body';
+
+const URL = 'http://localhost/databasemissionBack/';
+
 
 export default function Gameadd({ url }) {
 
@@ -27,6 +31,7 @@ export default function Gameadd({ url }) {
   
   return ( 
    <form onSubmit={save}>
+     <Body url={URL}/>
    <div>
      <p>Add new game</p>
      <input value={name} placeholder="Add new item" onChange={e => setName(e.target.value)}></input>
