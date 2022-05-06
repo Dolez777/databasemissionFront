@@ -58,3 +58,12 @@
 nav {
   background-color: rgb(198, 207, 235);
 }
+
+.Container {
+  width: 70%;
+  height: auto;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(0, 22, 22);
+}
