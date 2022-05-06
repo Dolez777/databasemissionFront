@@ -11,7 +11,7 @@ export default function Games({ url }) {
 
 
   useEffect(() => {
-		axios.get(url + 'games/getallproducts.php')
+		axios.get(url + 'games/Games.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
@@ -22,53 +22,15 @@ export default function Games({ url }) {
   }, [url])
 
 
-   function save(e){
-    e.preventDefault();
-    const json = JSON.stringify({name:name});
-    axios.post(url + "games/addgame.php", json, {
-      headers: {
-        "Content-Type" : "application/json"
-      }
-    })
-    .then((response) => {
-      setGames(Games =>  [...Games,response.data]);
-      setName("");
-    }).catch(error => {
-      alert(error.response ? error.response.data.error : error);
-    })
-  }
 
-  function remove(id){
-    const json = JSON.stringify({id:id})
-    axios.post(URL + "games/deleteGame.php", json, {
-      headers: {
-        "Content-Type" : "application/json"
-      }
-    })
-    .then((response) => {
-      const newListWithoutRemoved = games.filter((game) => game.id !== id);
-      setGames(newListWithoutRemoved);
-    }).catch(error => {
-      alert(error.response ? error.response.data.error : error);
-    });
-  }
 
   
   return ( 
-   <form onSubmit={save}>
-    <div>
-      <p>Add new game</p>
-      <input value={name} placeholder="Add new item" onChange={e => setName(e.target.value)}></input>
-      <button>Add</button>
-    </div>
+   <form>
     <div id='gamesdiv'>
       <ol>
         {games?.map((game) => {
-        return <li key={game.id}>{game.name}
-        <a href="#" className='delete' onClick={() => remove(game.id)}>
-              Delete
-              </a>
-        </li>
+        return <li key={game.id}>{game.name}</li>
         })}
       </ol>  
     </div>
