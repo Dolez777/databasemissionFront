@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import {Navbar,Nav,NavDropdown,Container} from 'react-bootstrap'
+import {Navbar,Nav,NavDropdown,Container} from 'react-bootstrap';
 
 export default class NavbarComp extends Component {
     render () {
@@ -11,9 +11,9 @@ export default class NavbarComp extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="#home">Etusivu</Nav.Link>
-                    <Nav.Link href="#link">jotain</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                    <Nav.Link href="#home">Pelit</Nav.Link>
+                    <Nav.Link href="#link">Genret</Nav.Link>
+                    <NavDropdown title="Kategoriat" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">
                         Action
                       </NavDropdown.Item>
@@ -28,6 +28,8 @@ export default class NavbarComp extends Component {
                         Separated link
                       </NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link href="/signup">Register</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>

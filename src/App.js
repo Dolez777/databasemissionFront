@@ -5,6 +5,7 @@ import NavbarComp from './Navbar';
 import Footer from './Footer'
 import Body from './body';
 import login from './login';
+import { Routes, Route } from "react-router-dom";
 
 const URL = 'http://localhost/databasemissionBack/';
 

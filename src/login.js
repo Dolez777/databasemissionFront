@@ -1,17 +1,21 @@
+import axios from "axios";
+import { useEffect,useState } from "react";
+
+const URL = 'http://localhost:3000/databasemissionback/login.php';
+
+export default function Login () {
+
+    const [login, setLogin] = useState('');
+
+    useEffect(() => {
+        axios.get(URL)
+        .then((response) => {
+            setLogin(response.data);
+        }).catch(error => {
+            alert(error);
+        });
+    }, [])
 
 
-export default function login() {
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get(`${URL}/login.php`)
-      .then((response) => {
-        setCategories(response.data);
-        setIsLoaded(true);
-      })
-      .catch((error) => {
-        alert(error.response ? error.response.data.error : error);
-      });
-  });
 }
