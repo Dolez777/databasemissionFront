@@ -1,9 +1,10 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './Navbar';
-import Footer from './Footer'
-import Body from './body';
+import NavbarComp from './components/navbar/Navbar';
+import Footer from './components/footer/Footer'
+import Body from './components/body/body';
+
 
 const URL = 'http://localhost/databasemissionBack/';
 
