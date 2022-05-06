@@ -17,8 +17,7 @@ function App() {
       </NavbarComp>
       <Body url={URL}/>
       <Footer/>
-        
-     
+      
     </div>
   );
 }
