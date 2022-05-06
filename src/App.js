@@ -16,8 +16,10 @@ function App() {
 
       </NavbarComp>
       <Body url={URL}/>
+      <div class="Container">
       <Footer/>
       
+  <p>ayoooo</p></div>
     </div>
   );
 }
