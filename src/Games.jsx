@@ -38,6 +38,21 @@ export default function Games({ url }) {
     })
   }
 
+  function remove(id){
+    const json = JSON.stringify({id:id})
+    axios.post(URL + "games/deleteGame.php", json, {
+      headers: {
+        "Content-Type" : "application/json"
+      }
+    })
+    .then((response) => {
+      const newListWithoutRemoved = games.filter((game) => game.id !== id);
+      setGames(newListWithoutRemoved);
+    }).catch(error => {
+      alert(error.response ? error.response.data.error : error);
+    });
+  }
+
   
   return ( 
    <form onSubmit={save}>
@@ -50,7 +65,7 @@ export default function Games({ url }) {
       <ol>
         {games?.map((game) => {
         return <li key={game.id}>{game.name}
-        <a href="#">
+        <a href="#" className='delete' onClick={() => remove(game.id)}>
               Delete
               </a>
         </li>
