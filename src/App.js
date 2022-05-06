@@ -1,9 +1,9 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './Navbar';
-import Footer from './Footer'
-import Body from './body';
+import NavbarComp from './components/navbar/Navbar';
+import Footer from './components/footer/Footer'
+import Body from './components/body/body';
 import login from './login';
 import { Routes, Route } from "react-router-dom";
 

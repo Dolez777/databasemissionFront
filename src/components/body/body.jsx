@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import "./body.css";
-import Games from './Games';
+import Games from '../../Games';
 
 const URL = 'http://localhost/databasemissionBack/';
 
