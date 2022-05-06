@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './Navbar';
 import Footer from './Footer'
 import Body from './body';
+import login from './login';
 
 const URL = 'http://localhost/databasemissionBack/';
 
