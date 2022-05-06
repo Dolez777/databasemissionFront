@@ -20,9 +20,11 @@ export default function Body({ url }) {
   
   return ( 
     <div id='gamesdiv'>
-      {games?.map((game) => {
-       return <div key={game.id}> {game.name}</div>
-      })}  
+      <ol>
+        {games?.map((game) => {
+        return <li key={game.id}> {game.name}</li>
+        })}
+      </ol>  
     </div>
      
   ); 
