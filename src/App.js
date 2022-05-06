@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './Navbar';
 import Footer from './Footer'
 import Body from './body';
-import login from './login';
+import Login from './login';
 import { Routes, Route } from "react-router-dom";
 
 const URL = 'http://localhost/databasemissionBack/';
@@ -12,9 +12,10 @@ const URL = 'http://localhost/databasemissionBack/';
 function App() {
   return (
     <div className='App'>
-      <NavbarComp>
-
-      </NavbarComp>
+      <NavbarComp/>
+      <Routes>
+        <Route path='/Login' element={<Login />}></Route>
+      </Routes>
       <Body url={URL}/>
       <Footer/>
       
