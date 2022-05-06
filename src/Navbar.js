@@ -5,7 +5,7 @@ export default class NavbarComp extends Component {
     render () {
         return (
           <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="" expand="lg">
               <Container>
                 <Navbar.Brand href="#home">Hieno pelisivu!!!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

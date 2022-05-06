@@ -4,3 +4,7 @@
     text-align: center;
     display: flex;
 }
+
+h1 {
+background-color: rgb(88, 96, 121);
+}
