@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/navbar/Navbar';
 import Footer from './components/footer/Footer'
 import Body from './components/body/body';
-
+import login from './login';
+import { Routes, Route } from "react-router-dom";
 
 const URL = 'http://localhost/databasemissionBack/';
 

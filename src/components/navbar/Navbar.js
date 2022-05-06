@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import {Navbar,Nav,NavDropdown,Container} from 'react-bootstrap'
+import {Navbar,Nav,NavDropdown,Container} from 'react-bootstrap';
 
 export default class NavbarComp extends Component {
     render () {
@@ -40,6 +40,8 @@ export default class NavbarComp extends Component {
                       Seikkailupelit
                       </NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link href="/signup">Register</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>
