@@ -16,7 +16,7 @@ const GameCard = (props) => {
 					<Link
 						className="links btn btn-outline-light btn-lg"
 						role="button"
-						to={'/productDetail/'+ props.id}
+						to={'/ProductDetail/'+ props.id}
 					>
 						Pelitiedot
 					</Link>

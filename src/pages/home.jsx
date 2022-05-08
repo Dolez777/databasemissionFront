@@ -10,7 +10,7 @@ export default function Home() {
     
   return (
     <div>
- {/*    <Navbar url={URL} setFilter={setFilter} /> */}
+    <Navbar url={URL} setfilter={setFilter} /> 
     <Body url={URL} filter={filter}/>
     </div>
   );

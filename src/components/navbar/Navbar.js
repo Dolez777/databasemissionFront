@@ -11,7 +11,7 @@ export default class NavbarComp extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="#home">Etusivu</Nav.Link>
+                    <Nav.Link  href="/">Etusivu</Nav.Link>
                     <Nav.Link href="#link">jotain</Nav.Link>
                     <NavDropdown title="Kategoriat" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">

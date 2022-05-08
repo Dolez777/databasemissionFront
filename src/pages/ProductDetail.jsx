@@ -15,7 +15,7 @@ export default function ProductDetail(props) {
 
 	useEffect(() => {
 		axios
-			.get(URL + 'products/getgamewithid.php/' + id)
+			.get(URL + 'games/getgamewithid.php/' + id)
 			.then((response) => {
 				setProductDetails(response.data.products[0]);
 				setLoading(false);
@@ -29,7 +29,7 @@ export default function ProductDetail(props) {
 						: error.response.data.error
 				);
 			});
-	}, []);
+	}, [id]);
 
 	console.log(id);
 
@@ -44,7 +44,7 @@ export default function ProductDetail(props) {
 					<div className="col-md-4 mt-5">
 						{!loading ? (
 							<img
-								src={productDetails.image}
+								src={productDetails.genre_id}
 								alt=""
 								style={
 									{
@@ -63,7 +63,7 @@ export default function ProductDetail(props) {
 							Hinta {!loading && productDetails.price}€/kpl
 						</h3>
 						{!loading && productDetails.aineosat} */}
-						<h3 className="my-3 mt-5">Hinta {!loading && productDetails.price}€/kpl</h3>
+						<h3 className="my-3 mt-5"> {!loading && productDetails.id}Pokemon</h3>
 						<Button
 							variant="outline-light"
 							className="w-50"

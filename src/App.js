@@ -16,14 +16,15 @@ function App() {
     <div className='App'>
       <NavbarComp/>
     <Routes>
-      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path='/Login' element={<Login />}></Route>
         <Route
 					path="/productDetail/:id"
 					element={<ProductDetail  />}
 				/>
     </Routes>
-      <Body url={URL}/>
+    <Body url={URL}/>
+
       <div className="Container">
       <Footer/>
       
