@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar } from 'react-bootstrap'
 import Body from '../components/body/body'
 
-const URL = "http://localhost/databasemissionBack/"
+const URL = "http://localhost/databasemissionBack/";
 
 export default function Home() {
 
@@ -10,8 +10,8 @@ export default function Home() {
     
   return (
     <div>
-    <Navbar url={URL} setFilter={setFilter} />
+ {/*    <Navbar url={URL} setFilter={setFilter} /> */}
     <Body url={URL} filter={filter}/>
     </div>
-  )
+  );
 }

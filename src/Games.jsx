@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import "./components/body/body.css";
+
 const URL = 'http://localhost/databasemissionBack/';
 
 export default function Games({ url }) {
 
-  const [games, setGames] = useState([]);
+  const [homegame, setHomeGames] = useState([]);
   const [name, setName] = useState("");
 
 
@@ -14,7 +15,7 @@ export default function Games({ url }) {
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
-			setGames(json);
+			setHomeGames(json);
     }).catch(error => {
 			alert(error.response === undefined ? error : error.response.data.error);
 		})
@@ -30,7 +31,7 @@ export default function Games({ url }) {
       }
     })
     .then((response) => {
-      setGames(Games =>  [...Games,response.data]);
+      setHomeGames(Games =>  [...Games,response.data]);
       setName("");
     }).catch(error => {
       alert(error.response ? error.response.data.error : error);
@@ -45,8 +46,8 @@ export default function Games({ url }) {
       }
     })
     .then((response) => {
-      const newListWithoutRemoved = games.filter((game) => game.id !== id);
-      setGames(newListWithoutRemoved);
+      const newListWithoutRemoved = homegame.filter((game) => game.id !== id);
+      setHomeGames(newListWithoutRemoved);
     }).catch(error => {
       alert(error.response ? error.response.data.error : error);
     });
@@ -62,7 +63,7 @@ export default function Games({ url }) {
     </div>
     <div id='gamesdiv'>
       <ol>
-        {games?.map((game) => {
+        {homegame?.map((game) => {
         return <li key={game.id}>{game.name}
         <a href="#" className='delete' onClick={() => remove(game.id)}>
               Delete

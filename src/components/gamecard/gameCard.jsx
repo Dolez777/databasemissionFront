@@ -6,7 +6,7 @@ const GameCard = (props) => {
 		<div className="kortti col-xs-12 col-sm-6 col-md-4 col-lg-3">
 			<div className="card">
 				<img
-					src={props.image}
+					src={props.genre_id}
 					className="card-img-top"
 					alt="..."
 				/>

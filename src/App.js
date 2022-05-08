@@ -6,6 +6,8 @@ import Footer from './components/footer/Footer'
 import Body from './components/body/body';
 import Login from './login';
 import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
 
 const URL = 'http://localhost/databasemissionBack/';
 
@@ -13,11 +15,16 @@ function App() {
   return (
     <div className='App'>
       <NavbarComp/>
-      <Routes>
+    <Routes>
+      <Route path="/Home" element={<Home />} />
         <Route path='/Login' element={<Login />}></Route>
-      </Routes>
+        <Route
+					path="/productDetail/:id"
+					element={<ProductDetail  />}
+				/>
+    </Routes>
       <Body url={URL}/>
-      <div class="Container">
+      <div className="Container">
       <Footer/>
       
   <p>ayoooo</p></div>
