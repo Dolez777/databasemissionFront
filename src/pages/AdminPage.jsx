@@ -12,7 +12,7 @@ export default function Games({ url }) {
 
 
   useEffect(() => {
-		axios.get(ULR + 'games/games.php')
+		axios.get(URL + 'games/games.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
@@ -25,7 +25,7 @@ export default function Games({ url }) {
   function save(e){
     e.preventDefault();
     const json = JSON.stringify({name:game});
-    axios.post(URL + "games/addGame.php", json, {
+    axios.post(URL + "games/addgame.php", json, {
       headers: {
         "Content-Type" : "application/json"
       }
