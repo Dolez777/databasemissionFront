@@ -7,7 +7,7 @@ export default class NavbarComp extends Component {
           <div>
             <Navbar bg="" expand="lg">
               <Container>
-                <Navbar.Brand href="#home">Hieno pelisivu!!!</Navbar.Brand>
+                <Navbar.Brand href="#home">Peli tietokanta sivu</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
