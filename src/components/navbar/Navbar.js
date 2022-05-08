@@ -12,7 +12,6 @@ export default class NavbarComp extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
                     <Nav.Link  href="/">Etusivu</Nav.Link>
-                    <Nav.Link href="#link">jotain</Nav.Link>
                     <NavDropdown title="Kategoriat" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">
                       Kauhupelit
