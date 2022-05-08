@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import {Navbar,Nav,NavDropdown,Container} from 'react-bootstrap';
+import {Navbar,Nav,NavDropdown,Container, Form, Button} from 'react-bootstrap';
 
 export default class NavbarComp extends Component {
     render () {
@@ -41,11 +41,34 @@ export default class NavbarComp extends Component {
                     </NavDropdown>
                     <Nav.Link href="/signup">Register</Nav.Link>
                     <Nav.Link href="/login">Login</Nav.Link>
+                    <Form>
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label></Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label></Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
                   </Nav>
+                  
                 </Navbar.Collapse>
+                
               </Container>
+              
             </Navbar>
+            
           </div>
+          
         );
     }
 }
