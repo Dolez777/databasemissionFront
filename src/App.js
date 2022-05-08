@@ -2,7 +2,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/navbar/Navbar';
-import Footer from './components/footer/Footer'
 import Body from './components/body/body';
 import Login from './login';
 import { Routes, Route } from "react-router-dom";
@@ -27,10 +26,7 @@ function App() {
     </Routes>
     <Body url={URL}/>
 
-      <div className="Container">
-      <Footer/>
-      
-  </div>
+     
     </div>
   );
 }
