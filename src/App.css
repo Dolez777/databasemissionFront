@@ -1,8 +1,8 @@
 
 .App {
   text-align: center;
-  height: 100%
-  
+  height: 100%;
+  background-color: rgb(198, 207, 235);
 }
 
 .App-logo {
@@ -53,4 +53,17 @@
   height: 50vh;
   text-align: center;
   display: flex;
+}
+
+nav {
+  background-color: rgb(198, 207, 235);
+}
+
+.Container {
+  width: 70%;
+  height: auto;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(0, 22, 22);
 }

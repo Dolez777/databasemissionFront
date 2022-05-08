@@ -1,0 +1,45 @@
+img {
+    height: 100%;
+    width:100%; 
+    object-fit: contain;
+}
+
+.card-img-top {
+    height: 15em; 
+    width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+	.card-img-top {
+        height: 12em; 
+        width: auto;
+    }
+    
+    
+    .kortti {
+        height: 22em;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .card-img-top {
+        height: 10em; 
+    }
+    
+    .kortti {
+        height: 20em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .card-img-top {
+        height: 8em; 
+    }
+     
+    .kortti {
+        height: 20em;
+        width: 1em;
+    }
+
+  }
