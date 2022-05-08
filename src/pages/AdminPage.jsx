@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import "../components/body/body.css";
 
@@ -12,7 +12,7 @@ export default function Games({ url }) {
 
 
   useEffect(() => {
-		axios.get(url + 'games/Games.php')
+		axios.get(ULR + 'games/games.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
