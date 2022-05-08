@@ -12,7 +12,7 @@ export default function Games({ url }) {
 
 
   useEffect(() => {
-		axios.get(ULR + 'games/games.php')
+		axios.get(URL + 'games/games.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
