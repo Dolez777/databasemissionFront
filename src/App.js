@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/navbar/Navbar';
 import Body from './components/body/body';
-import Login from './login';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/home';
 import ProductDetail from './pages/ProductDetail';
