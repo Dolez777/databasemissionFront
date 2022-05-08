@@ -11,7 +11,7 @@ export default function Games({ url }) {
 
 
   useEffect(() => {
-		axios.get(url + 'games/getallproducts.php')
+		axios.get(url + 'games/games.php')
 		.then((response) => {
 			const json = response.data;
 			console.log(json);
