@@ -28,7 +28,7 @@ function App() {
       <div className="Container">
       <Footer/>
       
-  <p>ayoooo</p></div>
+  </div>
     </div>
   );
 }
