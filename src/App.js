@@ -17,7 +17,6 @@ function App() {
       <NavbarComp/>
     <Routes>
       <Route path="/" element={<Home />} />
-        <Route path='/Login' element={<Login />}></Route>
         <Route path="/src/pages/AdminPage.jsx" element={< Games/>} />
         <Route
 					path="/ProductDetail/:id"
