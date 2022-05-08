@@ -25,7 +25,7 @@ export default function Games({ url }) {
   function save(e){
     e.preventDefault();
     const json = JSON.stringify({name:game});
-    axios.post(URL + "/games/addGame.php", json, {
+    axios.post(URL + "games/addGame.php", json, {
       headers: {
         "Content-Type" : "application/json"
       }
@@ -38,16 +38,34 @@ export default function Games({ url }) {
     })
   }
 
+  function remove(id){
+    const json = JSON.stringify({id:id})
+    axios.post(URL + "games/deleteGame.php", json, {
+      headers: {
+        "Content-Type" : "application/json"
+      }
+    })
+    .then((response) => {
+      const newListWithoutRemoved = games.filter((game) => game.id !== id);
+      setGames(newListWithoutRemoved);
+    }).catch(error => {
+      alert(error.response ? error.response.data.error : error);
+    });
+  }
+
 
 
 
   
   return ( 
    <form onSubmit={save}>
+    
     <div id='gamesdiv'>
       <ol>
         {games?.map((game) => {
-        return <li key={game.id}>{game.name}</li>
+        return <li key={game.id}>{game.name}
+          <a href="#" className='delete' onClick={() => remove(game.id)}>Delete</a>
+        </li>
         })}
       </ol>  
     </div>
