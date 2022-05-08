@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer'
 import Body from './components/body/body';
 import Login from './login';
 import { Routes, Route } from "react-router-dom";
-import Home from './pages/home';
+import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 
 const URL = 'http://localhost/databasemissionBack/';
