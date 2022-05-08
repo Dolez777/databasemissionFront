@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-const URL = 'http://localhost/verkkokauppaBackEndi/';
+const URL = 'http://localhost/databasemissionBack/';
 
 
 
