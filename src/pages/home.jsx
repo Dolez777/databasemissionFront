@@ -6,12 +6,12 @@ const URL = "http://localhost/databasemissionBack/";
 
 export default function Home() {
 
-  const [filter, setFilter] = React.useState("0")
+ /*  const [filter, setFilter] = React.useState("0") */
     
   return (
     <div>
-    <Navbar url={URL} setfilter={setFilter} /> 
-    <Body url={URL} filter={filter}/>
+    <Navbar url={URL} /* setfilter={setFilter} */ /> 
+    <Body url={URL}/*  filter={filter} *//>
     </div>
   );
 }
