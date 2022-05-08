@@ -39,8 +39,7 @@ export default class NavbarComp extends Component {
                       Seikkailupelit
                       </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/signup">Register</Nav.Link>
-                    <Nav.Link href="/login">Login</Nav.Link>
+                 
                     <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label></Form.Label>
