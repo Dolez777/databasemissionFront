@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
-import "./body.css";
+import "../components/body/body.css";
 
 const URL = 'http://localhost/databasemissionBack/';
 
