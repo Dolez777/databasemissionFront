@@ -57,7 +57,7 @@ export default function Games({ url }) {
   return ( 
    <form onSubmit={save}>
     <div>
-      <p>Add new game</p>
+      <p>Add uUsi game :DDD</p>
       <input value={name} placeholder="Add new item" onChange={e => setName(e.target.value)}></input>
       <button>Add</button>
     </div>
