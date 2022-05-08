@@ -39,8 +39,7 @@ export default class NavbarComp extends Component {
                       Seikkailupelit
                       </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link href="/signup">Register</Nav.Link>
-                    <Nav.Link href="/login">Login</Nav.Link>
+                 
                     <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label></Form.Label>
@@ -52,11 +51,9 @@ export default class NavbarComp extends Component {
     <Form.Label></Form.Label>
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
+   
   <Button variant="primary" type="submit">
-    Submit
+    Login
   </Button>
 </Form>
                   </Nav>
