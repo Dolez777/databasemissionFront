@@ -10,7 +10,7 @@ const [games, setGames] = useState([]);
 
 useEffect(() => {
 	axios
-			.get(props.url + 'games/getallproducts.php')
+			.get(props.url + 'games/games.php')
 			.then((response) => {
 				setGames(response.data);
 				console.log(response.data);
