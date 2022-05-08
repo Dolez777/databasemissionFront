@@ -8,6 +8,7 @@ export default function Games({ url }) {
 
   const [games, setGames] = useState([]);
   const [name, setName] = useState("");
+  const [game, setGame] = useState("");
 
 
   useEffect(() => {
@@ -21,12 +22,28 @@ export default function Games({ url }) {
 		})
   }, [url])
 
+  function save(e){
+    e.preventDefault();
+    const json = JSON.stringify({name:game});
+    axios.post(URL + "/games/addGame.php", json, {
+      headers: {
+        "Content-Type" : "application/json"
+      }
+    })
+    .then((response) => {
+      setGames(games =>  [...games,response.data]);
+      setGame("");
+    }).catch(error => {
+      alert(error.response ? error.response.data.error : error);
+    })
+  }
+
 
 
 
   
   return ( 
-   <form>
+   <form onSubmit={save}>
     <div id='gamesdiv'>
       <ol>
         {games?.map((game) => {
@@ -34,6 +51,8 @@ export default function Games({ url }) {
         })}
       </ol>  
     </div>
+    <input value={game} placeholder="Add new game" onChange={e => setGame(e.target.value)}></input>
+    <button>Add</button>
  </form>
      
   ); 
