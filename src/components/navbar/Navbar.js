@@ -13,6 +13,7 @@ export default class NavbarComp extends Component {
                   <Nav className="me-auto">
                     <Nav.Link  href="/">Etusivu</Nav.Link>
                     <Nav.Link  href="/src/pages/AdminPage.jsx">Admin</Nav.Link>
+                    <Nav.Link  href="/src/pages/login.jsx">Login</Nav.Link>
                     <NavDropdown title="Kategoriat" 
                     id="basic-nav-dropdown">
                      
@@ -42,23 +43,7 @@ export default class NavbarComp extends Component {
                       Seikkailupelit
                       </NavDropdown.Item>
                     </NavDropdown>
-                 
-                    <Form>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label></Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label></Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-   
-  <Button variant="primary" type="submit">
-    Login
-  </Button>
-</Form>
+  
                   </Nav>
                   
                 </Navbar.Collapse>

@@ -4,14 +4,23 @@ import "../components/body/body.css";
 
 const URL = 'http://localhost/databasemissionBack/';
 
+
 export default function Games({ url }) {
 
   const [games, setGames] = useState([]);
   const [name, setName] = useState("");
   const [game, setGame] = useState("");
+  const [admin, setAdmin] = useState(0)
 
 
   useEffect(() => {
+        axios.get(URL + 'src/modules/session.php')
+        .then((response) => {
+            setAdmin(response.data);
+            console.log(admin);
+        }).catch(error => {
+			alert(error.response === undefined ? error : error.response.data.error);
+		})
 		axios.get(URL + 'games/games.php')
 		.then((response) => {
 			const json = response.data;
@@ -25,12 +34,15 @@ export default function Games({ url }) {
   function save(e){
     e.preventDefault();
     const json = JSON.stringify({name:game});
+    
     axios.post(URL + "games/addgame.php", json, {
       headers: {
         "Content-Type" : "application/json"
       }
+      
     })
     .then((response) => {
+        
       setGames(games =>  [...games,response.data]);
       setGame("");
     }).catch(error => {
